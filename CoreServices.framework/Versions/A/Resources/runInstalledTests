@@ -1,0 +1,18 @@
+
+thisdir=`dirname $0`
+PROJECTS="${thisdir}"/*
+
+for i in $PROJECTS; do
+    if [[ -d $i ]]; then
+       projectname=`basename ${i}`
+       outfile="/tmp/${projectname}_Test.log"
+       if [[ -e $outfile ]]; then
+          rm $outfile
+       fi
+       echo RUNNING TESTS FOR ${projectname}
+       "${i}"/Tests/runTests | tee $outfile
+    fi
+
+done
+
+

@@ -1,0 +1,92 @@
+#! /bin/bash
+
+STREAMPERF_TOOL="${TOOLS_DIR}/StreamPerf"
+
+# SocketStream memory tests
+
+${STREAMPERF_TOOL} socket -m -s -l "" -n "Socket Synchronous-based memory usage" epoxy.apple.com
+ 
+${STREAMPERF_TOOL} socket -m -q -l "" -n "Socket Polling-based memory usage" epoxy.apple.com
+
+${STREAMPERF_TOOL} socket -m -e -l "" -n "Socket Event-based memory usage" epoxy.apple.com
+
+
+# SocketStream throughput tests
+
+${STREAMPERF_TOOL} socket -m -x 3 -k 102400 -s -l "" -n "Socket Synchronous-based throughput (100M to epoxy.apple.com)" epoxy.apple.com
+
+${STREAMPERF_TOOL} socket -m -x 3 -k 102400 -q -l "" -n "Socket Polling-based throughput (100M to epoxy.apple.com)" epoxy.apple.com
+
+${STREAMPERF_TOOL} socket -m -x 3 -k 102400 -e -l "" -n "Socket Event-based throughput (100M to epoxy.apple.com)" epoxy.apple.com
+
+
+# SocketStream receive buffer tests
+
+${STREAMPERF_TOOL} socket -s -l "" -n "Socket Synchronous-based - recv buffer leaks" -m -k 10240 -B 65536 epoxy.apple.com
+ 
+${STREAMPERF_TOOL} socket -q -l "" -n "Socket Polling-based - recv buffer leaks" -m -k 10240 -B 65536 epoxy.apple.com
+
+${STREAMPERF_TOOL} socket -e -l "" -n "Socket Event-based - recv buffer leaks" -m -k 10240 -B 65536 epoxy.apple.com
+
+${STREAMPERF_TOOL} socket -m -x 3 -s -l "" -n "Socket Synchronous-based - big recv buffer" -k 102400 -B 65536 epoxy.apple.com
+ 
+${STREAMPERF_TOOL} socket -x 3 -q -l "" -n "Socket Polling-based - big recv buffer" -k 102400 -B 65536 epoxy.apple.com
+
+${STREAMPERF_TOOL} socket -x 3 -e -l "" -n "Socket Event-based - big recv buffer" -k 102400 -B 65536 epoxy.apple.com
+
+${STREAMPERF_TOOL} socket -x 3 -s -l "" -n "Socket Synchronous-based - small recv buffer" -k 102400 -B 8192 epoxy.apple.com
+ 
+${STREAMPERF_TOOL} socket -x 3 -q -l "" -n "Socket Polling-based - small recv buffer" -k 102400 -B 8192 epoxy.apple.com
+
+${STREAMPERF_TOOL} socket -x 3 -e -l "" -n "Socket Event-based - small recv buffer" -k 102400 -B 8192 epoxy.apple.com
+
+
+
+
+
+
+# SocketStream tiny buffer tests
+
+${STREAMPERF_TOOL} socket -m -s -l "" -n "Socket Synchronous-based - tiny buffer" -k 100 -b 1 epoxy.apple.com
+ 
+${STREAMPERF_TOOL} socket -m -q -l "" -n "Socket Polling-based - tiny buffer" -k 100 -b 1 epoxy.apple.com
+
+${STREAMPERF_TOOL} socket -m -e -l "" -n "Socket Event-based - tiny buffer" -k 100 -b 1 epoxy.apple.com
+
+
+# all of these tests fail because the StreamPerf server fails to start.
+# something broke us... not sure what
+# start server for localhost tests
+#${STREAMPERF_TOOL} socket &
+
+# SocketStream localhost throughput tests
+
+#${STREAMPERF_TOOL} socket -k 102400 -s -l "" -n "Socket Synchronous-based throughput (100M to localhost)" localhost
+
+#${STREAMPERF_TOOL} socket -k 102400 -q -l "" -n "Socket Polling-based throughput (100M to localhost)" localhost
+
+#${STREAMPERF_TOOL} socket -k 102400 -e -l "" -n "Socket Event-based throughput (100M to localhost)" localhost
+
+#ipv4 tests
+
+#${STREAMPERF_TOOL} socket -k 102400 -s -l "" -n "Socket Synchronous-based throughput (100M to 127.0.0.1)" 127.0.0.1
+
+#${STREAMPERF_TOOL} socket -k 102400 -q -l "" -n "Socket Polling-based throughput (100M to 127.0.0.1)" 127.0.0.1
+
+#${STREAMPERF_TOOL} socket -k 102400 -e -l "" -n "Socket Event-based throughput (100M to 127.0.0.1)" 127.0.0.1
+
+#ipv6 tests
+
+#${STREAMPERF_TOOL} socket -k 102400 -s -l "" -n "Socket Synchronous-based throughput (100M to ::1)" \"[::1]\"
+
+#${STREAMPERF_TOOL} socket -k 102400 -q -l "" -n "Socket Polling-based throughput (100M to ::1)" \"[::1]\"
+
+#${STREAMPERF_TOOL} socket -k 102400 -e -l "" -n "Socket Event-based throughput (100M to ::1)" \"[::1]\"
+
+# kill the server
+#if [ "`uname`" = "Darwin" ] ; then 
+#  killall StreamPerf; 
+#else 
+#  taskkill /F /IM StreamPerf.exe; 
+#fi
+

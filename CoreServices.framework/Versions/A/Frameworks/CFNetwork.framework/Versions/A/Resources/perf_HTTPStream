@@ -1,0 +1,50 @@
+#! /bin/bash
+
+STREAMPERF_TOOL="${TOOLS_DIR}/StreamPerf"
+LISTLOAD_TOOL="${TOOLS_DIR}/ListLoad"
+LISTLOADCMD_TOOL="${TOOLS_DIR}/ListLoadCmd"
+
+# HTTPStream throughput tests
+
+${STREAMPERF_TOOL} HTTP -l "" -n "HTTP synchronous throughput (100MB)" -m -x 3 -s http://epoxy.apple.com/HTTPTest/100MB.dmg
+
+${STREAMPERF_TOOL} HTTP -l "" -n "HTTP polling throughput (100MB)" -m -x 3 -q http://epoxy.apple.com/HTTPTest/100MB.dmg
+
+${STREAMPERF_TOOL} HTTP -l "" -n "HTTP event-based throughput (100MB)" -m -x 3 -e http://epoxy.apple.com/HTTPTest/100MB.dmg
+
+
+# ListLoadCmd ListLoader tests
+
+${LISTLOADCMD_TOOL} -N "ListLoadCmd test (List)"  -L List -l "" http://epoxy.apple.com/epoxy.urllist
+ 
+# ListLoadCmd SimpleLoader tests
+
+${LISTLOADCMD_TOOL} -N "ListLoadCmd test (Ultimate)"  -L Ultimate -l "" http://epoxy.apple.com/epoxy.urllist
+
+# ListLoadCmd Protocol tests
+
+${LISTLOADCMD_TOOL} -N "ListLoadCmd test (WebFou)"  -L WebFou -l "" http://epoxy.apple.com/epoxy.urllist
+
+# ListLoadCmd Connection test (CFHTTPConnection)
+
+${LISTLOADCMD_TOOL} -N "ListLoad test (CFHTTPConnection)" -LCFHTTPConnection -l "" http://epoxy.apple.com/epoxy.urllist
+
+${LISTLOADCMD_TOOL} -N "ListLoad test (WebCF)" -L WebCF -l "" http://epoxy.apple.com/epoxy.urllist
+
+
+
+#ListLoad Loader tests
+
+
+${LISTLOAD_TOOL} -N "ListLoad test (List)"  -L List -l "" http://epoxy.apple.com/epoxy.urllist
+
+${LISTLOAD_TOOL} -N "ListLoad test (Ultimate)"  -L Ultimate -l "" http://epoxy.apple.com/epoxy.urllist
+
+# ListLoadCmd Protocol tests
+
+${LISTLOAD_TOOL} -N "ListLoad test (URLProtocol)"  -L URLProtocol -l "" http://epoxy.apple.com/epoxy.urllist
+
+# ListLoadCmd Connection test (URLConnection)
+
+${LISTLOAD_TOOL} -N "ListLoad test (URLConnection)" -L URLConnection -l "" http://epoxy.apple.com/epoxy.urllist
+

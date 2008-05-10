@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<signatures version='0.9'>
+  <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+  <depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+  <depends_on path='/System/Library/Frameworks/Security.framework'/>
+  <cftype name='DCSDictionaryRef' type='^{__DCSDictionary=}'/>
+  <function name='DCSCopyTextDefinition'>
+    <arg name='dictionary' declared_type='DCSDictionaryRef' type='^{__DCSDictionary=}'/>
+    <arg name='textString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='range' declared_type='CFRange' type='{?=ii}' type64='{?=qq}'/>
+    <retval declared_type='CFStringRef' type='^{__CFString=}'/>
+  </function>
+  <function name='DCSGetTermRangeInString'>
+    <arg name='dictionary' declared_type='DCSDictionaryRef' type='^{__DCSDictionary=}'/>
+    <arg name='textString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='offset' declared_type='CFIndex' type='l' type64='q'/>
+    <retval declared_type='CFRange' type='{?=ii}' type64='{?=qq}'/>
+  </function>
+</signatures>

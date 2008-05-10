@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>AE</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.AE</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>AE</string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleShortVersionString</key>
+	<string>402.2</string>
+	<key>CFBundleSignature</key>
+	<string>aevt</string>
+	<key>CFBundleVersion</key>
+	<string>402.2</string>
+	<key>CarbonLazyValues</key>
+	<dict>
+		<key>CodeFragmentManager</key>
+		<dict>
+			<key>AE</key>
+			<string>CFMPriv_AE</string>
+		</dict>
+		<key>Gestalt</key>
+		<dict>
+			<key>evnt</key>
+			<integer>23</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>

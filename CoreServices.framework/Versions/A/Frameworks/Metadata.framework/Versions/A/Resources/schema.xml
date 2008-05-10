@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema version="1.0" xmlns="http://www.apple.com/metadata"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://www.apple.com/metadata file:///System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Resources/MetadataSchema.xsd">
+    <note>
+        Base metadata schema for the built in UTI types
+    </note>
+    <attributes>
+        <attribute name="kMDItemContentType" type="CFString" uniqued="true" nosearch="true"/>
+        <attribute name="kMDItemContentTypeTree" type="CFString" uniqued="true" multivalued="true" nosearch="true"/>
+        <attribute name="kMDItemKeywords" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemPath" type="CFString"/>
+        <attribute name="kMDItemTitle" type="CFString"/>
+        <attribute name="kMDItemAuthors" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemEditors" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemProjects" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemWhereFroms" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemComment" type="CFString"/>
+        <attribute name="kMDItemCopyright" type="CFString"/>
+        <attribute name="kMDItemLastUsedDate" type="CFDate"/>
+        <attribute name="kMDItemUsedDates" type="CFDate" multivalued="true"/>
+        <attribute name="kMDItemAttributeChangeDate" type="CFDate" nosearch="true"/>
+        <attribute name="kMDItemContentCreationDate" type="CFDate"/>
+        <attribute name="kMDItemContentModificationDate" type="CFDate"/>
+        <attribute name="kMDItemTextContent" type="CFString"/>
+        <attribute name="kMDItemDisplayName" type="CFString"/>
+        <attribute name="kMDItemAlternateNames" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemAudioEncodingApplication" type="CFString"/>
+        <attribute name="kMDItemDurationSeconds" type="CFNumber"/>
+        <attribute name="kMDItemContactKeywords" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemVersion" type="CFString"/>
+        <attribute name="kMDItemPixelHeight" type="CFNumber"/>
+        <attribute name="kMDItemPixelWidth" type="CFNumber"/>
+        <attribute name="kMDItemColorSpace" type="CFString"/>
+        <attribute name="kMDItemBitsPerSample" type="CFNumber"/>
+        <attribute name="kMDItemFlashOnOff" type="CFBoolean"/>
+        <attribute name="kMDItemFocalLength" type="CFNumber"/>
+        <attribute name="kMDItemAcquisitionMake" type="CFString"/>
+        <attribute name="kMDItemAcquisitionModel" type="CFString"/>
+        <attribute name="kMDItemISOSpeed" type="CFNumber"/>
+        <attribute name="kMDItemOrientation" type="CFNumber"/>
+        <attribute name="kMDItemLayerNames" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemWhiteBalance" type="CFNumber"/>
+        <attribute name="kMDItemAperture" type="CFNumber"/>
+        <attribute name="kMDItemProfileName" type="CFString"/>
+        <attribute name="kMDItemResolutionWidthDPI" type="CFNumber"/>
+        <attribute name="kMDItemResolutionHeightDPI" type="CFNumber"/>
+        <attribute name="kMDItemExposureMode" type="CFNumber"/>
+        <attribute name="kMDItemExposureTimeSeconds" type="CFNumber"/>
+        <attribute name="kMDItemEXIFVersion" type="CFString"/>
+        <attribute name="kMDItemEXIFGPSVersion" type="CFString" nosearch="true"/>
+        <attribute name="kMDItemLatitude" type="CFNumber"/>
+        <attribute name="kMDItemLongitude" type="CFNumber"/>
+        <attribute name="kMDItemAltitude" type="CFNumber"/>
+        <attribute name="kMDItemCodecs" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemMediaTypes" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemStreamable" type="CFBoolean"/>
+        <attribute name="kMDItemTotalBitRate" type="CFNumber"/>
+        <attribute name="kMDItemVideoBitRate" type="CFNumber"/>
+        <attribute name="kMDItemAudioBitRate" type="CFNumber"/>
+        <attribute name="kMDItemDeliveryType" type="CFString"/>
+        <attribute name="kMDItemAlbum" type="CFString"/>
+        <attribute name="kMDItemAudioSampleRate" type="CFNumber"/>
+        <attribute name="kMDItemAudioChannelCount" type="CFNumber"/>
+        <attribute name="kMDItemTempo" type="CFNumber"/>
+        <attribute name="kMDItemKeySignature" type="CFString"/>
+        <attribute name="kMDItemTimeSignature" type="CFString"/>
+        <attribute name="kMDItemComposer" type="CFString"/>
+        <attribute name="kMDItemLyricist" type="CFString"/>
+        <attribute name="kMDItemAudioTrackNumber" type="CFNumber"/>
+        <attribute name="kMDItemRecordingDate" type="CFDate"/>
+        <attribute name="kMDItemMusicalGenre" type="CFString"/>
+        <attribute name="kMDItemIsGeneralMIDISequence" type="CFBoolean"/>
+        <attribute name="kMDItemRecordingYear" type="CFNumber"/>
+        <attribute name="kMDItemRecipients" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemOrganizations" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemLanguages" type="CFString" multivalued="true" nosearch="true"/>
+        <attribute name="kMDItemRights" type="CFString"/>
+        <attribute name="kMDItemPublishers" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemContributors" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemCoverage" type="CFString"/>
+        <attribute name="kMDItemSubject" type="CFString"/>
+        <attribute name="kMDItemTheme" type="CFString"/>
+        <attribute name="kMDItemDescription" type="CFString"/>
+        <attribute name="kMDItemIdentifier" type="CFString"/>
+        <attribute name="kMDItemAudiences" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemNumberOfPages" type="CFNumber"/>
+        <attribute name="kMDItemPageWidth" type="CFNumber"/>
+        <attribute name="kMDItemPageHeight" type="CFNumber"/>
+        <attribute name="kMDItemSecurityMethod" type="CFString"/>
+        <attribute name="kMDItemCreator" type="CFString"/>
+        <attribute name="kMDItemEncodingApplications" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemDueDate" type="CFDate"/>
+        <attribute name="kMDItemStarRating" type="CFNumber"/>
+        <attribute name="kMDItemPhoneNumbers" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemEmailAddresses" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemInstantMessageAddresses" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemKind" uniqued="true" type="CFString"/>
+        <attribute name="kMDItemHasAlphaChannel" type="CFBoolean"/>
+        <attribute name="kMDItemRedEyeOnOff" type="CFBoolean"/>
+        <attribute name="kMDItemMeteringMode" type="CFString"/>
+        <attribute name="kMDItemMaxAperture" type="CFNumber"/>
+        <attribute name="kMDItemFNumber" type="CFNumber"/>
+        <attribute name="kMDItemExposureProgram" type="CFString"/>
+        <attribute name="kMDItemHeadline" type="CFString"/>
+        <attribute name="kMDItemInstructions" type="CFString"/>
+        <attribute name="kMDItemCity" type="CFString"/>
+        <attribute name="kMDItemStateOrProvince" type="CFString"/>
+        <attribute name="kMDItemCountry" type="CFString"/>
+        <attribute name="kMDItemFinderComment" type="CFString"/>
+        <attribute name="kMDItemURL" type="CFString"/>
+        <attribute name="kMDItemFonts" type="CFString" multivalued="true"/>
+
+        <attribute name="kMDItemAppleLoopsRootKey" type="CFString"/>
+        <attribute name="kMDItemAppleLoopsKeyFilterType" type="CFString"/>
+        <attribute name="kMDItemAppleLoopsLoopMode" type="CFString"/>
+        <attribute name="kMDItemAppleLoopDescriptors" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemMusicalInstrumentCategory" type="CFString"/>
+        <attribute name="kMDItemMusicalInstrumentName" type="CFString"/>
+        <attribute name="kMDItemCFBundleIdentifier" type="CFString" nosearch="true"/>
+        <attribute name="kMDItemSupportFileType" type="CFString" multivalued="true" nosearch="true"/>
+
+        <attribute name="kMDItemInformation" type="CFString"/>
+        <attribute name="kMDItemDirector" type="CFString"/>
+        <attribute name="kMDItemProducer" type="CFString"/>
+        <attribute name="kMDItemGenre" type="CFString"/>
+        <attribute name="kMDItemPerformers" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemOriginalFormat" type="CFString"/>
+        <attribute name="kMDItemOriginalSource" type="CFString"/>
+
+        <attribute name="kMDItemAuthorEmailAddresses" type="CFString" multivalued="true"/>
+        <attribute name="kMDItemRecipientEmailAddresses" type="CFString" multivalued="true"/>
+
+        <attribute name="kMDItemDocumentLineage" type="CFString" multivalued="true" nosearch="true"/>
+        
+        <attribute name="kMDItemIsScreenCapture" type="CFBoolean" nosearch="true"/>
+        <attribute name="kMDItemScreenCaptureType" type="CFString" nosearch="true"/>
+
+        <attribute name="kMDItemFSContentChangeDate" type="CFDate"/>
+        <attribute name="kMDItemFSCreationDate" type="CFDate"/>
+        <attribute name="kMDItemFSExists" type="CFBoolean"/>
+        <attribute name="kMDItemFSHasCustomIcon" type="CFBoolean"/>
+        <attribute name="kMDItemFSInvisible" type="CFBoolean"/>
+        <attribute name="kMDItemFSIsExtensionHidden" type="CFBoolean"/>
+        <attribute name="kMDItemFSIsReadable" type="CFBoolean"/>
+        <attribute name="kMDItemFSIsStationery" type="CFBoolean"/>
+        <attribute name="kMDItemFSIsWriteable" type="CFBoolean"/>
+        <attribute name="kMDItemFSLabel" type="CFNumber"/>
+        <attribute name="kMDItemFSName" type="CFString"/>
+        <attribute name="kMDItemFSNodeCount" type="CFNumber"/>
+        <attribute name="kMDItemFSOwnerGroupID" type="CFNumber"/>
+        <attribute name="kMDItemFSOwnerUserID" type="CFNumber"/>
+        <attribute name="kMDItemFSSize" type="CFNumber"/>
+    </attributes>
+
+    <types>
+        <type name="public.item">
+           <note>
+               This is the base type
+           </note>
+           <previewattrs>
+               kMDItemLastUsedDate
+           </previewattrs>
+           <allattrs>
+           </allattrs>
+           <displayattrs>
+                kMDItemKeywords
+                kMDItemWhereFroms
+                kMDItemLastUsedDate
+           </displayattrs>
+           <readonlyattrs>
+                kMDItemPath
+                kMDItemAttributeChangeDate
+                kMDItemContentType
+                kMDItemContentTypeTree
+                kMDItemDisplayName
+                kMDItemKind
+                kMDItemLastUsedDate
+                kMDItemTextContent
+           </readonlyattrs>
+           <relatedattrs>
+                kMDItemKeywords
+           </relatedattrs>
+        </type>
+
+        <type name="com.apple.bundle">
+           <note>
+               This is the base type for all bundles on the system.
+           </note>
+           <allattrs>
+                kMDItemCFBundleIdentifier
+           </allattrs>
+           <readonlyattrs>
+                kMDItemCFBundleIdentifier
+            </readonlyattrs>
+        </type>
+
+        <type name="com.apple.application">
+           <note>
+               This is the base type for all applications on the system
+           </note>
+           <previewattrs>
+               kMDItemLastUsedDate
+           </previewattrs>
+           <allattrs>
+               kMDItemCopyright
+               kMDItemVersion
+           </allattrs>
+           <displayattrs>
+           </displayattrs>
+           <readonlyattrs>
+               kMDItemCopyright
+               kMDItemVersion
+           </readonlyattrs>
+        </type>
+
+        <type name="public.font">
+           <note>
+               All fonts derive from public.font
+           </note>
+           <previewattrs>
+               kMDItemLastUsedDate
+           </previewattrs>
+           <allattrs>
+               kMDItemAuthors
+               kMDItemCopyright
+               kMDItemFonts
+           </allattrs>
+           <relatedattrs>
+               kMDItemCopyright
+           </relatedattrs>
+        </type>
+
+        <type name="public.image">
+           <note>
+               All image types derive from public.image
+           </note>
+           <previewattrs>
+               kMDItemPixelHeight
+               kMDItemPixelWidth
+               kMDItemLastUsedDate
+           </previewattrs>
+           <allattrs>
+                kMDItemAcquisitionMake
+                kMDItemAcquisitionModel
+                kMDItemAlbum
+                kMDItemAperture
+                kMDItemCity
+                kMDItemColorSpace
+                kMDItemColorSpace
+                kMDItemCountry
+                kMDItemDescription
+                kMDItemEXIFVersion
+                kMDItemExposureMode
+                kMDItemExposureProgram
+                kMDItemExposureTimeSeconds
+                kMDItemFNumber
+                kMDItemFlashOnOff
+                kMDItemFocalLength
+                kMDItemHasAlphaChannel
+                kMDItemHeadline
+                kMDItemISOSpeed
+                kMDItemInstructions
+                kMDItemKeywords
+                kMDItemLayerNames
+                kMDItemMaxAperture
+                kMDItemMeteringMode
+                kMDItemOrientation
+                kMDItemPixelHeight
+                kMDItemPixelWidth
+                kMDItemProfileName
+                kMDItemRedEyeOnOff
+                kMDItemResolutionHeightDPI
+                kMDItemResolutionWidthDPI
+                kMDItemStateOrProvince
+                kMDItemTitle
+                kMDItemWhiteBalance
+                kMDItemEXIFGPSVersion
+                kMDItemAltitude
+                kMDItemLatitude
+                kMDItemLongitude
+           </allattrs>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemPixelHeight
+                kMDItemPixelWidth
+                kMDItemAcquisitionMake
+                kMDItemAcquisitionModel
+                kMDItemColorSpace
+                kMDItemProfileName
+                kMDItemFocalLength
+                kMDItemLayerNames
+                kMDItemAlbum
+                kMDItemDescription
+                kMDItemHasAlphaChannel
+                kMDItemRedEyeOnOff
+                kMDItemMeteringMode
+                kMDItemMaxAperture
+                kMDItemFNumber
+                kMDItemExposureProgram
+                kMDItemExposureTimeSeconds
+                kMDItemHeadline
+                kMDItemInstructions
+                kMDItemCity
+                kMDItemStateOrProvince
+                kMDItemCountry
+           </displayattrs>
+           <readonlyattrs>
+                kMDItemPixelHeight
+                kMDItemPixelWidth
+                kMDItemResolutionWidthDPI
+                kMDItemResolutionHeightDPI
+           </readonlyattrs>
+           <relatedattrs>
+                kMDItemAuthors
+                kMDItemPixelHeight
+                kMDItemPixelWidth
+           </relatedattrs>
+        </type>
+
+        <type name="public.movie">
+           <previewattrs>
+               kMDItemPixelHeight
+               kMDItemPixelWidth
+               kMDItemDurationSeconds
+               kMDItemLastUsedDate
+           </previewattrs>
+           <allattrs>
+                kMDItemAcquisitionMake
+                kMDItemAcquisitionModel
+                kMDItemAudioBitRate
+                kMDItemCodecs
+                kMDItemColorSpace
+                kMDItemDeliveryType
+                kMDItemLayerNames
+                kMDItemMediaTypes
+                kMDItemPixelHeight
+                kMDItemPixelWidth
+                kMDItemStreamable
+                kMDItemTotalBitRate
+                kMDItemVideoBitRate
+           </allattrs>
+           <displayattrs>
+                kMDItemPixelHeight
+                kMDItemPixelWidth
+                kMDItemCodecs
+           </displayattrs>
+           <readonlyattrs>
+               kMDItemPixelHeight
+               kMDItemPixelWidth
+               kMDItemDurationSeconds
+           </readonlyattrs>
+           <relatedattrs>
+                kMDItemCopyright
+                kMDItemAuthors
+                kMDItemTitle
+           </relatedattrs>
+        </type>
+
+        <type name="public.audio">
+           <previewattrs>
+               kMDItemDurationSeconds
+	       kMDItemAudioBitRate
+               kMDItemLastUsedDate
+           </previewattrs>
+           <allattrs>
+                kMDItemAlbum
+                kMDItemAuthors
+                kMDItemComposer
+                kMDItemMusicalGenre
+                kMDItemRecordingDate
+                kMDItemRecordingYear
+                kMDItemTitle
+                kMDItemComment
+                kMDItemMediaTypes
+                kMDItemTotalBitRate
+                kMDItemAudioBitRate
+                kMDItemKeySignature
+                kMDItemTimeSignature
+                kMDItemAudioEncodingApplication
+                kMDItemLyricist
+                kMDItemAudioTrackNumber
+                kMDItemMusicalInstrumentCategory
+                kMDItemMusicalInstrumentName
+                kMDItemAppleLoopDescriptors
+                kMDItemAppleLoopsRootKey
+                kMDItemAppleLoopsKeyFilterType
+                kMDItemAppleLoopsLoopMode
+           </allattrs>
+           <displayattrs>
+                kMDItemAlbum
+                kMDItemTitle
+                kMDItemMusicalGenre
+                kMDItemRecordingDate
+                kMDItemAuthors
+                kMDItemComposer
+                kMDItemRecordingYear
+                kMDItemComment
+           </displayattrs>
+           <readonlyattrs>
+               kMDItemDurationSeconds
+               kMDItemTotalBitRate
+               kMDItemAudioBitRate
+               kMDItemAudioEncodingApplication
+               kMDItemMusicalInstrumentCategory
+               kMDItemMusicalInstrumentName
+               kMDItemAppleLoopDescriptors
+               kMDItemAppleLoopsRootKey
+               kMDItemAppleLoopsKeyFilterType
+               kMDItemAppleLoopsLoopMode
+           </readonlyattrs>
+           <relatedattrs>
+                kMDItemAlbum
+                kMDItemAuthors
+           </relatedattrs>
+        </type>
+
+        <type name="public.bookmark">
+           <note>
+		        Generic bookmark
+           </note>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemPhoneNumbers
+                kMDItemEmailAddresses
+                kMDItemInstantMessageAddresses
+           </displayattrs>
+        </type>
+
+        <type name="public.contact">
+           <note>
+		        Generic contact
+           </note>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemPhoneNumbers
+                kMDItemEmailAddresses
+                kMDItemInstantMessageAddresses
+           </displayattrs>
+        </type>
+
+        <type name="public.email-message">
+           <note>
+		        Generic email message "Subject is stored in kMDItemDisplayName"
+           </note>
+           <displayattrs>
+                kMDItemContentCreationDate
+                kMDItemAuthors
+                kMDItemRecipients
+           </displayattrs>
+        </type>
+
+        <type name="public.calendar-event">
+           <note>
+		        Generic calendar event "Event title is stored in kMDItemDisplayName"
+           </note>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemCoverage
+                kMDItemWhereFroms
+                kMDItemAuthors
+                kMDItemContactKeywords
+                kMDItemDueDate
+           </displayattrs>
+        </type>
+
+        <type name="public.to-do-item">
+           <note>
+		        Generic To Do item "To do title is stored in kMDItemDisplayName"
+           </note>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemCoverage
+                kMDItemWhereFroms
+                kMDItemAuthors
+                kMDItemContactKeywords
+                kMDItemDueDate
+           </displayattrs>
+        </type>
+
+        <type name="com.apple.mail.emlx">
+           <allattrs>
+                kMDItemTitle
+                kMDItemAuthors
+                kMDItemContentCreationDate
+                kMDItemAuthorEmailAddresses
+                kMDItemRecipients
+                kMDItemRecipientEmailAddresses
+           </allattrs>
+           <displayattrs>
+                kMDItemContentCreationDate
+                kMDItemAuthors
+                kMDItemRecipients
+           </displayattrs>
+           <readonlyattrs>
+                kMDItemTitle
+                kMDItemAuthors
+                kMDItemContentCreationDate
+                kMDItemAuthorEmailAddresses
+                kMDItemRecipients
+                kMDItemRecipientEmailAddresses
+           </readonlyattrs>
+           <relatedattrs>
+                kMDItemTitle
+           </relatedattrs>
+        </type>
+
+        <type name="com.apple.systempreference.prefpane">
+           <allattrs>
+                kMDItemDisplayName
+           </allattrs>
+        </type>
+
+        <type name="com.microsoft.word.doc">
+           <allattrs>
+                kMDItemTitle
+                kMDItemSubject
+                kMDItemAuthors
+                kMDItemComment
+           </allattrs>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemSubject
+                kMDItemAuthors
+                kMDItemComment
+           </displayattrs>
+        </type>
+
+        <type name="com.microsoft.excel.xls">
+           <allattrs>
+                kMDItemTitle
+                kMDItemAuthors
+                kMDItemComment
+           </allattrs>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemAuthors
+                kMDItemComment
+           </displayattrs>
+        </type>
+
+        <type name="com.apple.keynote.key">
+           <allattrs>
+                kMDItemTitle
+                kMDItemKeywords
+                kMDItemAuthors
+                kMDItemComment
+           </allattrs>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemKeywords
+                kMDItemAuthors
+                kMDItemComment
+           </displayattrs>
+        </type>
+
+        <type name="public.audiovisual-content">
+           <allattrs>
+                kMDItemAudioChannelCount
+                kMDItemAuthors
+                kMDItemCodecs
+                kMDItemCopyright
+                kMDItemDurationSeconds
+                kMDItemEncodingApplications
+                kMDItemPixelHeight
+                kMDItemPixelWidth
+                kMDItemStarRating
+                kMDItemTitle
+                kMDItemTotalBitRate
+                kMDItemInformation
+                kMDItemDirector
+                kMDItemProducer
+                kMDItemGenre
+                kMDItemPerformers
+                kMDItemOriginalFormat
+                kMDItemOriginalSource
+           </allattrs>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemPixelHeight
+                kMDItemPixelWidth
+                kMDItemDurationSeconds
+                kMDItemAuthors
+                kMDItemPerformers
+                kMDItemDirector
+                kMDItemProducer
+                kMDItemGenre
+                kMDItemCopyright
+                kMDItemAudioChannelCount
+                kMDItemTotalBitRate
+                kMDItemCodecs
+                kMDItemEncodingApplications
+                kMDItemOriginalFormat
+                kMDItemOriginalSource
+                kMDItemStarRating
+                kMDItemInformation
+           </displayattrs>
+           <readonlyattrs>
+                kMDItemAudioChannelCount
+                kMDItemCodecs
+                kMDItemDurationSeconds
+                kMDItemPixelHeight
+                kMDItemPixelWidth
+                kMDItemTotalBitRate
+           </readonlyattrs>
+        </type>
+
+        <type name="com.adobe.pdf">
+           <allattrs>
+		       kMDItemVersion
+			   kMDItemTitle
+			   kMDItemAuthors
+			   kMDItemDescription
+			   kMDItemCreator
+			   kMDItemEncodingApplications
+			   kMDItemKeywords
+			   kMDItemNumberOfPages
+			   kMDItemPageWidth
+			   kMDItemPageHeight
+			   kMDItemSecurityMethod
+           </allattrs>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemAuthors
+                kMDItemDescription
+                kMDItemVersion
+                kMDItemNumberOfPages
+                kMDItemPageWidth
+                kMDItemPageHeight
+                kMDItemSecurityMethod
+                kMDItemCreator
+                kMDItemEncodingApplications
+           </displayattrs>
+           <readonlyattrs>
+				kMDItemVersion
+				kMDItemCreator
+				kMDItemEncodingApplications
+				kMDItemNumberOfPages
+				kMDItemPageWidth
+				kMDItemPageHeight
+				kMDItemSecurityMethod
+           </readonlyattrs>
+           <relatedattrs>
+                kMDItemAuthors
+           </relatedattrs>
+        </type>
+
+        <type name="com.apple.ical.bookmark">
+           <note>
+           </note>
+           <allattrs>
+                kMDItemDisplayName
+                kMDItemTitle
+                kMDItemCoverage
+                kMDItemWhereFroms
+                kMDItemAuthors
+                kMDItemContactKeywords
+                kMDItemComment
+                kMDItemDueDate
+           </allattrs>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemCoverage
+                kMDItemWhereFroms
+                kMDItemAuthors
+                kMDItemContactKeywords
+                kMDItemDueDate
+           </displayattrs>
+           <relatedattrs>
+                kMDItemAuthors
+                kMDItemDueDate
+           </relatedattrs>
+        </type>
+
+        <type name="com.apple.ical.bookmark.todo">
+           <note>
+           </note>
+           <allattrs>
+                kMDItemDisplayName
+                kMDItemCoverage
+                kMDItemTitle
+                kMDItemWhereFroms
+                kMDItemAuthors
+                kMDItemContactKeywords
+                kMDItemComment
+                kMDItemDueDate
+           </allattrs>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemCoverage
+                kMDItemWhereFroms
+                kMDItemAuthors
+                kMDItemContactKeywords
+                kMDItemDueDate
+           </displayattrs>
+           <relatedattrs>
+                kMDItemAuthors
+                kMDItemDueDate
+           </relatedattrs>
+        </type>
+
+        <type name="com.apple.addressbook.person">
+           <note>
+           </note>
+           <allattrs>
+                kMDItemCity
+                kMDItemCountry
+                kMDItemEmailAddresses
+                kMDItemInstantMessageAddresses
+                kMDItemPhoneNumbers
+                kMDItemStateOrProvince
+                kMDItemTitle
+           </allattrs>
+           <displayattrs>
+                kMDItemTitle
+                kMDItemPhoneNumbers
+                kMDItemEmailAddresses
+                kMDItemInstantMessageAddresses
+           </displayattrs>
+           <relatedattrs>
+                kMDItemPhoneNumbers
+                kMDItemEmailAddresses
+           </relatedattrs>
+        </type>
+
+        <type name="com.apple.addressbook.group">
+           <note>
+           </note>
+           <allattrs>
+                kMDItemTitle
+           </allattrs>
+           <displayattrs>
+                kMDItemTitle
+           </displayattrs>
+        </type>
+
+        <type name="com.apple.safari.bookmark">
+           <note>
+           </note>
+           <allattrs>
+                kMDItemURL
+           </allattrs>
+           <displayattrs>
+                kMDItemURL
+           </displayattrs>
+           <relatedattrs>
+                kMDItemURL
+           </relatedattrs>
+        </type>
+
+        <type name="public.html">
+           <note>
+           </note>
+           <allattrs>
+              kMDItemTitle
+              kMDItemSubject
+              kMDItemOrganizations
+              kMDItemAuthors
+              kMDItemKeywords
+              kMDItemComment
+              kMDItemContentCreationDate
+              kMDItemContentModificationDate
+           </allattrs>
+           <displayattrs>
+              kMDItemTitle
+              kMDItemSubject
+              kMDItemOrganizations
+              kMDItemAuthors
+              kMDItemKeywords
+              kMDItemComment
+              kMDItemContentCreationDate
+              kMDItemContentModificationDate
+           </displayattrs>
+        </type>
+
+        <type name="com.apple.webarchive">
+           <note>
+           </note>
+           <allattrs>
+              kMDItemTitle
+              kMDItemSubject
+              kMDItemOrganizations
+              kMDItemAuthors
+              kMDItemKeywords
+              kMDItemComment
+              kMDItemContentCreationDate
+              kMDItemContentModificationDate
+           </allattrs>
+           <displayattrs>
+              kMDItemTitle
+              kMDItemSubject
+              kMDItemOrganizations
+              kMDItemAuthors
+              kMDItemKeywords
+              kMDItemComment
+              kMDItemContentCreationDate
+              kMDItemContentModificationDate
+           </displayattrs>
+        </type>
+
+        <type name="public.rtf" exporterAvailable="true">
+           <note>
+           </note>
+           <allattrs>
+              kMDItemCopyright
+              kMDItemTitle
+              kMDItemSubject
+              kMDItemOrganizations
+              kMDItemAuthors
+              kMDItemKeywords
+              kMDItemComment
+              kMDItemContentCreationDate
+              kMDItemContentModificationDate
+           </allattrs>
+           <displayattrs>
+              kMDItemTitle
+              kMDItemSubject
+              kMDItemOrganizations
+              kMDItemAuthors
+              kMDItemKeywords
+              kMDItemComment
+              kMDItemContentCreationDate
+              kMDItemContentModificationDate
+           </displayattrs>
+           <relatedattrs>
+              kMDItemOrganizations
+              kMDItemAuthors
+           </relatedattrs>
+        </type>
+
+        <type name="com.apple.rtfd" exporterAvailable="true">
+           <note>
+           </note>
+           <allattrs>
+               kMDItemCopyright
+              kMDItemTitle
+              kMDItemSubject
+              kMDItemOrganizations
+              kMDItemAuthors
+              kMDItemKeywords
+              kMDItemComment
+              kMDItemContentCreationDate
+              kMDItemContentModificationDate
+           </allattrs>
+           <displayattrs>
+              kMDItemTitle
+              kMDItemSubject
+              kMDItemOrganizations
+              kMDItemAuthors
+              kMDItemKeywords
+              kMDItemComment
+              kMDItemContentCreationDate
+              kMDItemContentModificationDate
+           </displayattrs>
+           <relatedattrs>
+               kMDItemOrganizations
+               kMDItemAuthors
+           </relatedattrs>
+        </type>
+
+        <type name="com.apple.traditional-mac-plain-text">
+           <note>
+           </note>
+           <allattrs>
+           </allattrs>
+           <displayattrs>
+              kMDItemTitle
+              kMDItemSubject
+              kMDItemOrganizations
+              kMDItemAuthors
+              kMDItemKeywords
+              kMDItemComment
+           </displayattrs>
+        </type>
+
+        <type name="public.plain-text">
+           <note>
+           </note>
+           <allattrs>
+           </allattrs>
+           <displayattrs>
+              kMDItemTitle
+              kMDItemSubject
+              kMDItemOrganizations
+              kMDItemAuthors
+              kMDItemEditors
+              kMDItemKeywords
+              kMDItemComment
+           </displayattrs>
+        </type>
+
+        <type name="com.apple.ichat.transcript">
+           <note>
+           </note>
+           <allattrs>
+			  kMDItemAuthors
+			  kMDItemContentCreationDate
+			  kMDItemDeliveryType
+			  kMDItemDurationSeconds
+			  kMDItemInstantMessageAddresses
+              kMDItemCoverage
+           </allattrs>
+           <displayattrs>
+			  kMDItemAuthors
+              kMDItemCoverage
+			  kMDItemContentCreationDate
+			  kMDItemDeliveryType
+			  kMDItemDurationSeconds
+			  kMDItemInstantMessageAddresses
+           </displayattrs>
+        </type>
+
+    </types>
+</schema>

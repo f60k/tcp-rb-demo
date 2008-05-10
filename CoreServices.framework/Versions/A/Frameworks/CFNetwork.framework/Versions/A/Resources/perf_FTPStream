@@ -1,0 +1,23 @@
+#! /bin/bash
+
+STREAMPERF_TOOL="${TOOLS_DIR}/StreamPerf"
+
+# CFFTPStream memory usage
+
+echo CFFTPStream Memory Usage
+
+${STREAMPERF_TOOL} FTP -l "" -n "FTP sync memory (100MB)" -m -s ftp://epoxy.apple.com/Public/100MB.dmg;
+
+${STREAMPERF_TOOL} FTP -l "" -n "FTP poll memory (100MB)" -m -q ftp://epoxy.apple.com/Public/100MB.dmg;
+
+${STREAMPERF_TOOL} FTP -l "" -n "FTP event memory (100MB)" -m -e ftp://epoxy.apple.com/Public/100MB.dmg;
+
+echo CFFTPStream throughput tests
+
+# CFFTPStream throughput tests to epoxy
+
+${STREAMPERF_TOOL} FTP -l "" -n "FTP sync throughput (100MB)" -x 3 -s ftp://epoxy.apple.com/Public/100MB.dmg;
+
+${STREAMPERF_TOOL} FTP -l "" -n  "FTP poll throughput (100MB)" -x 3 -q ftp://epoxy.apple.com/Public/100MB.dmg;
+
+${STREAMPERF_TOOL}  FTP -l "" -n "FTP event throughput (100MB)" -x 3 -e ftp://epoxy.apple.com/Public/100MB.dmg;

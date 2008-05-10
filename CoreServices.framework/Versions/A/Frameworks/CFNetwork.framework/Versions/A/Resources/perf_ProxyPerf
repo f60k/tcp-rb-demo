@@ -1,0 +1,21 @@
+#! /bin/bash
+
+STREAMPERF_TOOL="${TOOLS_DIR}/StreamPerf"
+
+# HTTPStream Proxy Tests
+
+${STREAMPERF_TOOL} HTTP -l "" -n "Proxy HTTP sync (10MB)" -m -v csd5.apple.com -p http://csd5.apple.com -s http://epoxy.apple.com/HTTPTest/10MB.dmg
+
+${STREAMPERF_TOOL} HTTP -l "" -n "Proxy HTTP poll (10MB)" -m -v csd5.apple.com -p http://csd5.apple.com -q http://epoxy.apple.com/HTTPTest/10MB.dmg
+
+${STREAMPERF_TOOL} HTTP -l "" -n "Proxy HTTP event (10MB)" -m -v csd5.apple.com -p http://csd5.apple.com -e http://epoxy.apple.com/HTTPTest/10MB.dmg
+
+# PAC tests
+
+${STREAMPERF_TOOL} HTTP -F -l "" -n "Proxy HTTP sync pac (auth proxy 10MB)" -m -pac http://epoxy.apple.com/TestPac.js -s http://epoxy.apple.com/HTTPTest/10MB.dmg?auth
+
+${STREAMPERF_TOOL} HTTP -F -l "" -n "Proxy HTTP poll pac (auth proxy 10MB)" -m -pac http://epoxy.apple.com/TestPac.js -q http://epoxy.apple.com/HTTPTest/10MB.dmg?auth
+
+${STREAMPERF_TOOL} HTTP -F -l "" -n "Proxy HTTP event pac (auth proxy 10MB)" -m -pac http://epoxy.apple.com/TestPac.js -e http://epoxy.apple.com/HTTPTest/10MB.dmg?auth
+
+
